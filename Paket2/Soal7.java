@@ -27,7 +27,7 @@ public class Soal7 {
         
         for (int i = 0; i < jumlahPesananPaket; i++) {
             
-            System.out.println("=".repeat(35));
+            System.out.println("=".repeat(30));
             System.out.print("Masukkan nama paket ke " + (i + 1) + ": ");
             namaPaket[i] = sc.nextLine();
             
