@@ -6,7 +6,7 @@ public class Soal1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Masukkan jumlah elemen Fibbonacci");
+        System.out.print("Masukkan jumlah elemen Fibbonacci: ");
         int jumlahfib = sc.nextInt();
 
         sc.close();

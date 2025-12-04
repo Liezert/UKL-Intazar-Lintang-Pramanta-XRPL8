@@ -1,6 +1,6 @@
 package Paket2;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Soal7 {
     public static void main(String[] args) {
@@ -60,7 +60,7 @@ public class Soal7 {
             }
         }
 
-        System.out.println("\n" + "=");
+        System.out.println("\n" + "=".repeat(100));
         System.out.println("Nama Paket Photobooth | Total Biaya Produksi | Total Pendapatan | Laba/Rugi | Status");
         System.out.println("=".repeat(100));
 
@@ -70,10 +70,10 @@ public class Soal7 {
         }
 
         System.out.println("=".repeat(100));
-        System.out.printf("Total Laba/Rugi Keseluruhan: Rp%,d\n", totalNilaiKeleuruhan);
+        System.out.printf("Total Laba/Rugi Keseluruhan: Rp. %,d\n", totalNilaiKeleuruhan);
         
         if (jumlahPesananPaket > 0) {
-            System.out.println("Paket dengan Laba Tertinggi: " + namaLabaTertinggi + " (Rp." + String.format("%,d", labaTertinggi) + ")");
+            System.out.println("Cookies dengan Laba Tertinggi: " + namaLabaTertinggi + " (Rp" + String.format("%,d", labaTertinggi) + ")");
         } else {
             System.out.println("Tidak ada data Photobooth yang dimasukkan.");
         }
