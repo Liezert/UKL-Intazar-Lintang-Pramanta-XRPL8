@@ -12,9 +12,9 @@ public class Soal7 {
 
         //array
         String[] namaPaket = new String[jumlahPesananPaket];
-        int[] hargaProduksiperEvent = new int[jumlahPesananPaket];
-        int[] hargaJualperEvent = new int[jumlahPesananPaket];
-        int[] jumlahEventTerjual = new int[jumlahPesananPaket];
+        int[] biayaProduksi = new int[jumlahPesananPaket];
+        int[] hargaJual = new int[jumlahPesananPaket];
+        int[] jumlahEvent = new int[jumlahPesananPaket];
         
         int[] totalBiayaProduksi = new int[jumlahPesananPaket];
         int[] totalPendapatan = new int[jumlahPesananPaket];
@@ -32,18 +32,18 @@ public class Soal7 {
             namaPaket[i] = sc.nextLine();
             
             System.out.print("Biaya produksi per event: ");
-            hargaProduksiperEvent[i] = sc.nextInt();
+            biayaProduksi[i] = sc.nextInt();
             
             System.out.print("Biaya jual per bungkus: ");
-            hargaJualperEvent[i] = sc.nextInt();
+            hargaJual[i] = sc.nextInt();
             
             System.out.print("Jumlah terjual: ");
-            jumlahEventTerjual[i] = sc.nextInt();
+            jumlahEvent[i] = sc.nextInt();
             sc.nextLine();
 
-            totalBiayaProduksi[i] = jumlahEventTerjual[i] * jumlahEventTerjual[i];
-            totalPendapatan[i] = hargaJualperEvent[i] * jumlahEventTerjual[i];
-            labarugi[i] = totalPendapatan[i] - totalBiayaProduksi[i];
+            totalBiayaProduksi[i] = biayaProduksi[i] * jumlahEvent[i]; //B.Produksi * jumlah
+            totalPendapatan[i] = hargaJual[i] * jumlahEvent[i]; //Harga * jumlah
+            labarugi[i] = totalPendapatan[i] - totalBiayaProduksi[i]; // profit - modal 
             totalNilaiKeleuruhan += labarugi[i];
 
             if (labarugi[i] > 0) {
