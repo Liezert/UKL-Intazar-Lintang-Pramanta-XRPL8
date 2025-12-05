@@ -16,7 +16,7 @@ public class Soal2 {
                 String statement= ""; 
                 switch (bilanganhasil) {
                     case 0:
-                        statement =("saya anak 34");
+                        statement =("saya anak 33");
                         break;
                     case 1:
                         statement = ("saya anak wikusama");

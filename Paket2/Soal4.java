@@ -1,7 +1,6 @@
 package Paket2;
 
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Soal4 {
     public static void main(String[] args) {
@@ -10,20 +9,30 @@ public class Soal4 {
 
         int randomAngka = rndm.nextInt(100) + 1;
 
+        ArrayList<Integer> riwayat = new ArrayList<>();
+
         int tebakanUser = 0;
+        
         while (tebakanUser != randomAngka) {
-            System.out.println("Masukkan angka:");
+            System.out.print("Masukkan angka: ");
             tebakanUser = sc.nextInt();
-            System.out.println("====================================");
+            riwayat.add(tebakanUser);
             if (tebakanUser > randomAngka) {
                 System.out.println("Angka anda teralalu tinggi!");
+                System.out.println("====================================");
             } else if (tebakanUser < randomAngka) {
                 System.out.println("Angka anda teralalu rendah!");
+                System.out.println("====================================");
             }
-            System.out.println("====================================");
-            System.out.println("Jawabannya adalah : " + randomAngka );
         }
+
         System.out.println("Selamat kamu menang!");
+        System.out.println("");
+        System.out.println("Ini adalah riwayat input anda:");
+        for (int i : riwayat) {
+            System.out.print(i + " ");
+    }
+        
         sc.close();
     }
 }
